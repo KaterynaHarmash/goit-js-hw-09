@@ -7,7 +7,7 @@ startBtnRef.addEventListener('click', (e) => {
     const stepDelay = Number(document.querySelector('.form input[name="step"]').value);
   const amountPromises = Number(document.querySelector('.form input[name="amount"]').value);
   let mydelay = firstDelay;
-  for (let i = 0; i < amountPromises; i++) {
+  for (let i = 1; i <= amountPromises; i++) {
           createPromise(i, mydelay)
             .then(({ position, delay }) => {
               Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
